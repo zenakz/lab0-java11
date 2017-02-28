@@ -21,9 +21,9 @@ public class TailsTest {
 	}
 
 	@Test
-	public void tailsShouldReturnListOfStringsOfSizeEqualsToInputStringLength() {
+	public void tailsShouldReturnListOfStringsOfSizeEqualsToInputStringLengthPlusOne() {
 		
-		assertThat(tails, Matchers.hasSize(HELLO.length()));
+		assertThat(tails, Matchers.hasSize(HELLO.length() + 1));
 	}
 	@Test
 	public void tailsShouldReturnFullStringAsFirstElement() {
@@ -31,9 +31,9 @@ public class TailsTest {
 		assertThat(tails.get(0), Matchers.equalTo(HELLO));
 	}
 	@Test
-	public void tailsShouldLastStringEqualsToLastChatInString() {
+	public void tailsShouldReturnEmptyStringAsLastElement() {
 		
-		assertThat(tails.get(tails.size()-1), Matchers.equalTo("o"));
+		assertThat(tails.get(tails.size()-1), Matchers.equalTo(""));
 	}
 
 }
